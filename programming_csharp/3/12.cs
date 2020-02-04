@@ -6,7 +6,7 @@ namespace DoWhile
 {
     class DoWhile
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             int i = 11;
             do
