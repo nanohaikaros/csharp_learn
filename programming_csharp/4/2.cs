@@ -14,9 +14,12 @@ namespace PassingValues
 
     public class Tester
     {
-        int howManyPeople = 5;
-        float pi = 3.14f;
-        MyClass mc = new MyClass();
-        mc.SomeMethod(howManyPeople, pi)
+        static void Main()
+        {
+            int howManyPeople = 5;
+            float pi = 3.14f;
+            MyClass mc = new MyClass();
+            mc.SomeMethod(howManyPeople, pi);
+        }
     }
 }
