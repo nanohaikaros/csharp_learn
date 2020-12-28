@@ -131,28 +131,319 @@ namespace Demo
     //     }
     // }
 
-    class MyClass
+    // class MyClass
+    // {
+    //     public int Val = 20;
+    // }
+
+    // class Program
+    // {
+    //     static void MyMethod(MyClass f1, int f2)
+    //     {
+    //         f1.Val = f1.Val + 5;
+    //         f2 = f2 + 5;
+    //         Console.WriteLine("f1.Val: {0}, f2: {1}", f1.Val, f2);
+    //     }
+
+    //     static void Main()
+    //     {
+    //         MyClass a1 = new MyClass();
+    //         int a2 = 10;
+
+    //         MyMethod(a1, a2);
+    //         Console.WriteLine("f1.Val: {0}, f2: {1}", a1.Val, a2);
+    //     }
+    // }
+
+    // class MyClass
+    // {
+    //     public int Val = 20;
+    // }
+
+    // class Program 
+    // {
+    //     static void MyMethod(ref MyClass f1, ref int f2)
+    //     {
+    //         f1.Val = f1.Val + 5;
+    //         f2 = f2 + 5;
+    //         Console.WriteLine("f1.Val: {0}, f2: {1}", f1.Val, f2);
+    //     }
+
+    //     static void Main()
+    //     {
+    //         MyClass a1 = new MyClass();
+    //         int a2 = 10;
+
+    //         MyMethod(ref a1, ref a2);
+    //         Console.WriteLine("f1.Val: {0}, f2: {2}", a1.Val, a2);
+    //     }
+    // }
+
+    /* class MyClass { public int Val = 20; }
+
+    class Program 
+    {
+        static void RefAsParameter(MyClass f1)
+        {
+            f1.Val = 50;
+
+            Console.WriteLine("After member assignment: {0}", f1.Val);
+            f1 = new MyClass();
+
+            Console.WriteLine("After new object creation: {0}", f1.Val);
+        }
+
+        static void Main()
+        {
+            MyClass a1 = new MyClass();
+
+            Console.WriteLine("Before method call: {0}", a1.Val);
+            RefAsParameter(a1);
+            Console.WriteLine("After method call: {0}", a1.Val);
+        }
+    } */
+
+    // class MyClass
+    // {
+    //     public int Val = 20;
+    // }
+
+    // class Program
+    // {
+    //     static void RefAsParameter(ref MyClass f1)
+    //     {
+    //         f1.Val = 50;
+    //         Console.WriteLine("After member assignment: {0}", f1.Val);
+
+    //         f1 = new MyClass();
+    //         Console.WriteLine("After new object creation: {0}", f1.Val);
+    //     }
+
+    //     static void Main(string[] args)
+    //     {
+    //         MyClass a1 = new MyClass();
+
+    //         Console.WriteLine("Before method call: {0}", a1.Val);
+    //         RefAsParameter(ref a1);
+    //         Console.WriteLine("After method call: {0}", a1.Val);
+    //     }
+    // }
+
+    /* class MyClass 
     {
         public int Val = 20;
     }
 
     class Program
     {
-        static void MyMethod(MyClass f1, int f2)
+        static void MyMethod(out MyClass f1, out int f2)
         {
-            f1.Val = f1.Val + 5;
-            f2 = f2 + 5;
-            Console.WriteLine("f1.Val: {0}, f2: {1}", f1.Val, f2);
+            f1 = new MyClass();
+            f1.Val = 25;
+            f2 = 15;
         }
 
         static void Main()
         {
-            MyClass a1 = new MyClass();
-            int a2 = 10;
+            MyClass a1 = null;
+            int a2;
 
-            MyMethod(a1, a2);
-            Console.WriteLine("f1.Val: {0}, f2: {1}", a1.Val, a2);
-            Console.
+            MyMethod(out a1, out a2);
+        }
+    } */
+
+    // class MyClass
+    // {
+    //     public void ListInts(params int[] inVals)
+    //     {
+    //         if ((inVals != null) && (inVals.Length != 0))
+    //             for (int i = 0; i < inVals.Length; i++)
+    //             {
+    //                 inVals[i] = inVals[i] * 10;
+    //                 Console.WriteLine("{0}", inVals[i]);
+    //             }
+    //     }
+    // }
+
+    // class Program
+    // {
+    //     static void Main()
+    //     {
+    //         int first = 5, second = 6, third = 7;
+
+    //         MyClass mc = new MyClass();
+    //         mc.ListInts(first, second, third);
+
+    //         Console.WriteLine("{0}, {1}, {2}", first, second, third);
+    //     }
+    // }
+
+    // class Program
+    // {
+    //     static void Main()
+    //     {
+    //         int[] myArr = new int[] { 5, 6, 7 };
+
+    //         MyClass mc = new MyClass();
+    //         mc.ListInts(myArr);
+
+    //         foreach (int x in myArr)
+    //         {
+    //             Console.WriteLine("{0}", x);
+    //         }
+    //     }
+    // }
+
+    // class MyClass 
+    // {
+    //     public int Calc(int a, int b, int c)
+    //     { return (a + b) * c;}
+
+    //     static void Main()
+    //     {
+    //         MyClass mc = new MyClass();
+    //         // int result = mc.Calc(c: 2, a: 4, b: 3);
+
+    //         // Console.WriteLine("{0}", result);
+
+    //         int r0 = mc.Calc(4, 3, 2);
+    //         int r1 = mc.Calc(4, b: 3, c: 2);
+    //         int r2 = mc.Calc(4, c: 2, b: 3);
+    //         int r3 = mc.Calc(c: 2, b: 3, a: 4);
+    //         int r4 = mc.Calc(c: 2, b:1 + 2, a: 3 + 1);
+
+    //         Console.WriteLine("{0}, {1}, {2}, {3}, {4}", r0, r1, r2, r3, r4);
+    //     }
+    // }
+    
+    
+    // class MyClass
+    // {
+    //     double GetCylinderVolume(double radius, double height)
+    //     {
+    //         return 3.1416 * radius * radius * height;
+    //     }
+
+    //     static void Main()
+    //     {
+    //         MyClass mc = new MyClass();
+    //         double volume;
+
+    //         volume = mc.GetCylinderVolume(3.0, 4.0);
+    //         volume = mc.GetCylinderVolume(radius: 3.0, height: 4.0);
+    //     }
+    // }
+
+
+    // class MyClass
+    // {
+    //     public int Calc(int a, int b = 3)
+    //     {
+    //         return a + b;
+    //     }
+
+    //     static void Main()
+    //     {
+    //         MyClass mc = new MyClass();
+
+    //         int r0 = mc.Calc(5, 6);
+    //         int r1 = mc.Calc(5);
+
+    //         Console.WriteLine("{0}, {1}", r0, r1);
+    //     }
+    // }
+
+    // class MyClass
+    // {
+    //     public int Calc(int a = 2, int b = 3, int c = 4)
+    //     {
+    //         return (a + b) * c;
+    //     }
+
+    //     static void Main()
+    //     {
+    //         MyClass mc = new MyClass();
+    //         int r0 = mc.Calc(5, 6, 7);
+    //         int r1 = mc.Calc(5, 6);
+    //         int r2 = mc.Calc(5);
+    //         int r3 = mc.Calc();
+
+    //         Console.WriteLine("{0}, {1}, {2}, {3}", r0, r1, r2, r3);
+    //     }
+    // }
+
+    // class MyClass
+    // {
+    //     double GetCylinderVolume(double radius = 3.0, double height = 4.0)
+    //     {
+    //         return 3.1416 * radius * radius * height;
+    //     }
+
+    //     static void Main()
+    //     {
+    //         MyClass mc = new MyClass();
+    //         double volume;
+
+    //         volume = mc.GetCylinderVolume(3.0, 4.0);
+    //         Console.WriteLine("Volume = " + volume);
+
+    //         volume = mc.GetCylinderVolume(radius: 2.0);
+    //         Console.WriteLine("Volume = " + volume);
+
+    //         volume = mc.GetCylinderVolume(height: 2.0);
+    //         Console.WriteLine("Volume = " + volume);
+
+    //         volume = mc.GetCylinderVolume();
+    //         Console.WriteLine("Volume = " + volume);
+    //     }
+    // }
+
+    // class Program
+    // {
+    //     static void MethodA(int par1, int par2)
+    //     {
+    //         Console.WriteLine("Enter MethodA: {0}, {1}", par1, par2);
+    //         methodB(11, 18);
+    //         Console.WriteLine("Exit MethodA");
+    //     }
+
+    //     static void MethodB(int par1, int par2)
+    //     {
+    //         Console.WriteLine("Enter MethodB: {0}, {1}", par1, par2);
+    //         Console.WriteLine("Exit MethodB");
+    //     }
+
+    //     static void Main()
+    //     {
+    //         Console.WriteLine("Enter Main");
+    //         methodA(15, 30);
+    //         Console.WriteLine("Exit Main");
+    //     }
+    // }
+
+    class Program
+    {
+        int Factorial(int inValue)
+        {
+            if (inValue <= 1)
+                return inValue;
+            else
+                return inValue * Factorial(inValue - 1);
+        }
+
+        public void Count(int inVal)
+        {
+            if (inVal == 0)
+                return;
+            Count(inVal - 1);
+
+            Console.WriteLine("{0}", inVal);
+        }
+
+        static void Main()
+        {
+            Program pr = new Program();
+            pr.Count(3);
         }
     }
 }
