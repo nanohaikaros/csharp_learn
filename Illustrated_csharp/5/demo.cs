@@ -83,20 +83,76 @@ namespace Demo
         }
     } */
 
+    // class MyClass
+    // {
+        // void TimeUpdate()
+        // {
+        //     DateTime dt = DateTime.Now;
+        //     if (dt.Hour < 12)   
+        //         return;         // 返回 
+        //     Console.WriteLine("It's afternoom!");   // 否则，输出消息
+        // }
+
+        // static void Main()
+        // {
+        //     MyClass mc = new MyClass(); // 创建一个类实例
+        //     mc.TimeUpdate();        // 调用方法
+        // }
+
+        // PrintSum(5, someInt);
+
+        // public void PrintSum(int x, int y)
+        // {
+        //     int sum = x + y;
+        //     Console.WriteLine("Newsflash: {0} + {1} is {2}", x, y, sum);
+        // }
+
+    //     public int Sum(int x, int y)
+    //     {
+    //         return x + y;
+    //     }
+
+    //     public float Avg(float input1, float input2)
+    //     {
+    //         return (input1 + input2) / 2.0F;
+    //     }
+    // }
+
+    // class Program
+    // {
+    //     static void Main()
+    //     {
+    //         MyClass myT = new MyClass();
+    //         int someInt = 6;
+
+    //         Console.WriteLine("Newsflash: Sum: {0} and {1} is {2}", 5, someInt, myT.Sum(5, someInt));
+
+    //         Console.WriteLine("Newsflash: Avg: {0} and {1} is {2}", 5, someInt, myT.Avg(5, someInt));
+    //     }
+    // }
+
     class MyClass
     {
-        void TimeUpdate()
+        public int Val = 20;
+    }
+
+    class Program
+    {
+        static void MyMethod(MyClass f1, int f2)
         {
-            DateTime dt = DateTime.Now;
-            if (dt.Hour < 12)   
-                return;         // 返回 
-            Console.WriteLine("It's afternoom!");   // 否则，输出消息
+            f1.Val = f1.Val + 5;
+            f2 = f2 + 5;
+            Console.WriteLine("f1.Val: {0}, f2: {1}", f1.Val, f2);
         }
 
         static void Main()
         {
-            MyClass mc = new MyClass(); // 创建一个类实例
-            mc.TimeUpdate();        // 调用方法
+            MyClass a1 = new MyClass();
+            int a2 = 10;
+
+            MyMethod(a1, a2);
+            Console.WriteLine("f1.Val: {0}, f2: {1}", a1.Val, a2);
+            Console.
         }
     }
 }
